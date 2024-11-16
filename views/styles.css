@@ -1,0 +1,294 @@
+/* styles.css */
+
+/* Color Variables */
+:root {
+    --background-color: #202124; /* Soft Black */
+    --primary-color: #303134; /* Muted Dark Gray */
+    --accent-color: #FFA726; /* Soft Orange */
+    --text-primary-color: #E0E0E0; /* Soft White */
+    --text-secondary-color: #9E9E9E; /* Light Gray */
+    --border-color: #555; /* Light border color for buttons */
+    --hover-bg-color: #2b2b2b; /* Lighter background on hover */
+    --text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Subtle shadow for readability */
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-primary-color);
+    font-family: 'Roboto', sans-serif;
+    text-shadow: var(--text-shadow);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+.main {
+    margin: 4% 4% 30px 4%; /* top, right, bottom, left */
+}
+
+/* Boxed style for the .features section */
+.features {
+    background-color: #2c2c2e; /* Dark background like the modal */
+    color: #E0E0E0; /* Light text color */
+    padding: 30px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
+    max-width: 70%; /* Width of the box */
+    margin: 20px auto; /* Center on the page and add vertical space */
+}
+
+/* Flexbox container for cards to align side by side */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line if needed */
+    gap: 40px; /* Space between cards */
+    justify-content: center; /* Distribute cards with space between them */
+}
+
+/* Style for individual .card as a button */
+.card {
+    background-color: #3a3a3c;
+    color: #E0E0E0;
+    padding: 30px 20px 20px; /* Padding on top for spacing */
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+    cursor: pointer;
+    font: inherit;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+    position: relative; /* Set relative positioning for internal elements */
+}
+
+/* Hover and active states */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.card:active {
+    transform: translateY(1px); /* Pressed effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Move the title higher within the card */
+.card h3 {
+    color: #FFA726;
+    font-size: 20px;
+    position: relative;
+    top: -10px; /* Move title up by 10px */
+    margin-bottom: 10px; /* Space below title */
+}
+
+/* Description text styling */
+.card p {
+    margin-top: 0; /* Ensure no extra spacing at the top */
+}
+
+/* Button Styles */
+.button {
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+    font-size: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    text-shadow: var(--text-shadow);
+}
+
+.button:hover {
+    background-color: var(--hover-bg-color);
+    border-color: var(--text-secondary-color);
+}
+
+.button:active {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* User Controls Grid */
+.user-controls {
+    display: grid;
+    grid-template-columns: 1fr repeat(4, auto);
+    align-items: center;
+    gap: 10px;
+}
+
+/* Apply text shadow to other elements if needed */
+.user-container {
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-shadow: var(--text-shadow);
+}
+
+/* Search Bar Styles */
+.search-bar {
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px;
+    background-color: var(--primary-color);
+    color: var(--text-primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+
+.navbar__items {
+    display: flex;
+    align-items: center;
+}
+
+.navbar__socials .navbar__icon {
+    margin-right: 15px;
+    color: var(--text-primary-color);
+    transition: color 0.3s;
+}
+
+.navbar__socials .navbar__icon:hover {
+    color: var(--accent-color);
+}
+
+.navbar__navigation .navbar__item {
+    margin-right: 20px;
+    color: var(--text-primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar__navigation .navbar__item:hover {
+    color: var(--accent-color);
+}
+
+.navbar__user {
+    background: none;
+    border: none;
+    color: var(--text-primary-color);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.navbar__user:hover {
+    color: var(--accent-color);
+}
+
+/* Utility classes */
+.text-accent {
+    color: var(--accent-color);
+}
+
+.text-secondary {
+    color: var(--text-secondary-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-accent {
+    background-color: var(--accent-color);
+}
+/* Modal overlay */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex; /* Flex layout to center content */
+    align-items: center; /* Vertical center */
+    justify-content: center; /* Horizontal center */
+    z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #2c2c2e; /* Dark background */
+    color: #E0E0E0; /* Light text color */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    max-width: 400px; /* Control the width */
+    width: 90%; /* Responsive on smaller screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center text and form elements */
+    box-sizing: border-box;
+}
+
+/* Form styling inside modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center align form elements */
+    gap: 15px; /* Space between form fields */
+    width: 100%; /* Full width for elements */
+}
+
+/* Input fields */
+.modal-content input[type="text"],
+.modal-content input[type="password"] {
+    width: 100%; /* Full width within form */
+    padding: 10px;
+    background-color: #3a3a3c; /* Darker input background */
+    border: 1px solid #555; /* Dark border */
+    color: #E0E0E0;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding/border doesn't overflow */
+    margin: 0; /* Remove any default margin */
+}
+
+/* Button styling */
+.modal-content button {
+    width: 100%; /* Full width button */
+    padding: 10px;
+    background-color: #FFA726; /* Bright contrasting color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.modal-content button:hover {
+    background-color: #f09300; /* Darker shade on hover */
+}
+
+/* Close button alignment */
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+
