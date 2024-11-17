@@ -44,7 +44,7 @@ $users = $AU->getAllUsers();
                 <button class="button">delete user</button>
                 <button class="button">edit user</button>
             </div>
-        </div>
+        </div>f
     <?php endforeach; ?>
 </div>
 
