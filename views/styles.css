@@ -288,3 +288,20 @@ body {
     color: #333;
     cursor: pointer;
 }
+/* rizz*/
+.rizz {
+    position: absolute;
+    top: 200px;
+    right: 0px;
+    left: 5px;
+    font-size: 50px;
+    color: #0dff00;
+    cursor: pointer;
+    
+      div {
+        
+      }
+}
+.rizz2 {
+font-family: "Comic Sans MS", "Comic Sans", cursive;
+}

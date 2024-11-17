@@ -13,7 +13,7 @@ Session::start();
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class = "rizz2">
 
 <!-- Header Section -->
 <header>
@@ -30,6 +30,7 @@ Session::start();
             <a class="navbar__item" href="servers.php">Servers</a>
             <a class="navbar__item" href="contact.php">Contact</a>
             <a class="navbar__item" href="devpage.php">Dev Page</a>
+            <a class="navbar__item" href="devpage.php">rizz</a>
         </div>
         <div>
 <?php
