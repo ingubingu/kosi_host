@@ -26,7 +26,7 @@ download link - https://code.visualstudio.com/
 
 this is just the IDE or "code editor", it has built in functionality with github so thats why we use it.
 
-Step 3: Use git in VSCODE to PULL the project files
+Step 3: Use git in VSCODE to PULL the project files in the XAMPP htdocs folder
 Here is a helpful video for that. https://youtu.be/i_23KUAEtUM?si=rNBGl1KsLbrDNN3L
 
 Step 4: create new branch and get to work.
