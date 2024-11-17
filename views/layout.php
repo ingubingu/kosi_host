@@ -30,7 +30,7 @@ Session::start();
             <a class="navbar__item" href="servers.php">Servers</a>
             <a class="navbar__item" href="contact.php">Contact</a>
             <a class="navbar__item" href="devpage.php">Dev Page</a>
-            <a class="navbar__item" href="devpage.php">rizz</a>
+            <a class="navbar__item" href="Rizz.php">rizz</a>
         </div>
         <div>
 <?php
