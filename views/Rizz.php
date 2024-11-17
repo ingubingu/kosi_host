@@ -21,7 +21,11 @@ Rizzing up gyatts in ohio till I grimace on my shake</p>
 <img class = "truth" src="ttruth.jpg" alt="Description of the image" width="600" height="2000">
 
 <img class = "twt" src="https://pbs.twimg.com/media/Gcl8VDUa8AALz4g?format=jpg&name=4096x4096" alt="Description of the image" width="600" height="2000">
+
+<img class = "twtt" src="https://pbs.twimg.com/media/GcjuFvUXQAAxmqt?format=jpg&name=large" alt="Description of the image" width="1000" height="600">
+
+<video class = "vid" width="320" height="240" controls src="PAYPHONE.mp4"></video>
+
 <?php $content = ob_get_clean(); // Store buffered content into $content ?>
 <?php $title = 'Rizz'; // Set the page title ?>
 <?php include 'layout.php'; // Include the layout ?>
-<?php include '..includes/twitter.php'; // Include the layout ?>
