@@ -47,3 +47,9 @@ $users = $AU->getAllUsers();
         </div>
     <?php endforeach; ?>
 </div>
+
+<div id="userDetailsModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <!-- User details will be loaded here -->
+    </div>
+</div>

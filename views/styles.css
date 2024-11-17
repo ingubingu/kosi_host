@@ -237,9 +237,7 @@ body {
     border-radius: 8px; /* Rounded corners */
     max-width: 400px; /* Control the width */
     width: 90%; /* Responsive on smaller screens */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center; /* Center text and form elements */
-    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for a lifted effect */
 }
 
 /* Form styling inside modal */
@@ -290,5 +288,3 @@ body {
     color: #333;
     cursor: pointer;
 }
-
-

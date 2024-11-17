@@ -85,4 +85,28 @@ class UserController {
     public function getUserInstances($userId) {
         return $this->userService->getUserInstances($userId);
     }
+
+    
+    public function getUserByUsername($username) {
+
+        // Implement the logic to get user by username
+
+        // For example, you can query the database to get the user details
+
+        // Return the user details as an associative array or false if not found
+
+        $user = [
+
+            'username' => $username,
+
+            'email' => 'user@example.com',
+
+            'name' => 'John Doe'
+
+        ];
+
+        return $user;
+
+    }
+    
 }
