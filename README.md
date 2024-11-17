@@ -1,5 +1,16 @@
 Welcome to the read me,
 
+This is a side project of mine I started a few weeks ago from now(11/17/24), I remember wanting to play a modded minecraft server with friends but didnt have enough resources on my own computer to host the server, so i had to use one of those game server services. So im trying to recreate one of those from scratch.
+
+What is kosi_host supposed to be?
+Kosi_Host is intended to be a website that users can visit to "rent" already configured game servers hosted by us.
+
+Where will you be hosting these servers?
+Right now, the plan is to use AWS EC2 instances to host the game servers and website.
+
+
+
+
 Installations for collaboration!
 
 If you dont already have git installed, then install it here
@@ -19,3 +30,9 @@ Step 3: Use git in VSCODE to PULL the project files
 Here is a helpful video for that. https://youtu.be/i_23KUAEtUM?si=rNBGl1KsLbrDNN3L
 
 Step 4: create new branch and get to work.
+
+
+
+
+
+
