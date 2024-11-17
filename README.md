@@ -8,7 +8,7 @@ download link - https://git-scm.com/downloads
 Step 1: Install XAMPP
 download link - https://www.apachefriends.org/download.html
 
-This is a tool that contains a web server called Apache, basically it gives the info to your web browser. And a database tool called MySQL that is used to create and manage databases.
+This is a tool that contains a web server called Apache, basically it gives the info to your web browser, and a database tool called MySQL that is used to create and manage databases which is where we can store basically any info or data we need.
 
 Step 2: Install VSCODE
 download link - https://code.visualstudio.com/
