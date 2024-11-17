@@ -1,6 +1,6 @@
 Welcome to the read me,
 
-This is a side project of mine I started a few weeks ago from now(11/17/24), I remember wanting to play a modded minecraft server with friends but didnt have enough resources on my own computer to host the server, so i had to use one of those game server services. So im trying to recreate one of those from scratch.
+This is a side project of mine I started a few weeks ago from now(11/17/24), I remember wanting to play a modded minecraft server with friends but didnt have enough resources on my own computer to host the server, so i had to use one of those game server services. So im trying to recreate one of those from scratch as a way to teach myself the ins and outs of webdevelopement.
 
 What is kosi_host supposed to be?
 Kosi_Host is intended to be a website that users can visit to "rent" already configured game servers hosted by us.
