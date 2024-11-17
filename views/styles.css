@@ -305,3 +305,25 @@ body {
 .rizz2 {
 font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
+
+.skibidi {
+    position: absolute;
+    top: 400px;
+    right: 100px;
+    left: 0px;
+    padding-left: 300px;
+}
+.truth {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    left: 0px;
+    padding-left: 1200px;
+}
+.twt {
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    left: 0px;
+    padding-left: 0px;
+}
