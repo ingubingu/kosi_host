@@ -5,10 +5,10 @@ require "../vendor/autoload.php";
 use Abraham\TwitterOAuth\TwitterOAuth;
 
 // Twitter API credentials
-define('API_KEY', 'IxcYk4CkchNxd6qdKbc4wcw1a');
-define('API_SECRET_KEY', 'IxcYk4CkchNxd6qdKbc4wcw1a');
-define('ACCESS_TOKEN', '892904055177138176-gf2GFXE41ngT5uFNpofuzZ82bH7vp0R');
-define('ACCESS_TOKEN_SECRET', 'RkGQBYOng5Ilz2ZnLYO7lqHtVmqnehNRxE5W7xsocH2Jh');
+define('API_KEY', '');
+define('API_SECRET_KEY', '');
+define('ACCESS_TOKEN', '');
+define('ACCESS_TOKEN_SECRET', '');
 
 // Create TwitterOAuth object
 $twitterOAuth = new TwitterOAuth(API_KEY, API_SECRET_KEY, ACCESS_TOKEN, ACCESS_TOKEN_SECRET);
