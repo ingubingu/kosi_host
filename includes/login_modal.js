@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             if (data.success) {
                 console.log('Login successful, redirecting to account page');
                 // Login successful, redirect to the account page
-                window.location.href = '../views/';
+                window.location.href = '../views/account.php';
             } else {
                 console.error('Login failed:', data.error);
                 // Display error message if login failed

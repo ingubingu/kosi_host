@@ -6,6 +6,8 @@ require_once '../handlers/Session.php';
 
 Session::start();
 
+header('Content-Type: application/json');
+
 // Collect form data
 $user_name = $_POST['user_name'] ?? '';
 $password  = $_POST['password'] ?? '';
