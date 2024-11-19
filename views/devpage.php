@@ -4,84 +4,73 @@ require_once '../handlers/Session.php';
 require_once '../handlers/Message.php';
 
 Session::start();
-Session::set('currentpage', 'register');
+Session::set('currentpage', 'devpage');
 
-
-
-// Retrieve messages
-$successMessage = '';
-$errorMessages = [];
-if ($messages = Message::getMessages()) {
-    foreach ($messages as $message) {
-        if ($message['type'] === 'success') {
-            $successMessage .= '<p class="success-message">' . htmlspecialchars($message['text']) . '</p>';
-        } elseif ($message['type'] === 'error') {
-            $errorMessages[] = '<p class="error-message">' . htmlspecialchars($message['text']) . '</p>';
-        }
-    }
-}
-
-// Retrieve form data for pre-filling
-$form_data = Session::get('form_data', []);
-Session::remove('form_data');
+$messages = Message::getMessages();
 ?>
+<?php ob_start(); // Start buffering ?>
+<?php if (!empty($messages)): ?>
+    <div class="messages">
+        <?php foreach ($messages as $message): ?>
+            <div class="message <?php echo $message['type']; ?>">
+                <?php echo $message['text']; ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+<?php endif; ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register</title>
-    <!-- Include your CSS files here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Page</title>
+    <style>
+        .column-input {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        .column-input input, .column-input select {
+            margin-right: 10px;
+        }
+        .column-input button {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
+    <h1>Developer Page</h1>
+    <form id="create-table-form" method="POST">
+        <label for="table-name">Table Name:</label>
+        <input type="text" id="table-name" name="table[name]" required><br><br>
 
-<h1>Register</h1>
+        <div id="columns-container">
+            <div class="column-input">
+                <input type="text" name="table[columns][0][name]" placeholder="Column Name" required>
+                <select name="table[columns][0][type]" required>
+                    <option value="INT">INT</option>
+                    <option value="VARCHAR(255)">VARCHAR(255)</option>
+                    <option value="TEXT">TEXT</option>
+                    <option value="DATE">DATE</option>
+                    <option value="DATETIME">DATETIME</option>
+                    <option value="BOOLEAN">BOOLEAN</option>
+                    <!-- Add more types as needed -->
+                </select>
+                <button type="button" class="remove-column-button">Remove</button>
+            </div>
+        </div>
 
-<?php
-// Display success message
-if (!empty($successMessage)) {
-    echo $successMessage;
-}
+        <button type="button" id="add-column-button">Add Column</button><br><br>
+        <button type="submit">Create Table</button>
+    </form>
 
-// Display error messages
-if (!empty($errorMessages)) {
-    foreach ($errorMessages as $errorMessage) {
-        echo $errorMessage;
-    }
-}
-?>
+    <!-- Response Message Placeholder -->
+    <div id="response-message"></div>
 
-<!-- Registration Form -->
-<form action="registration_process.php" method="post">
-
-    <label for="user_name">Username:</label>
-    <input type="text" name="user_name" id="user_name" value="<?php echo htmlspecialchars($form_data['user_name'] ?? ''); ?>" required>
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required>
-
-    <button type="submit">Register</button>
-</form>
-
-
-
-
+    <script src="../includes/devpage.js"></script>
 </body>
-
-
-<!-- login_form.php -->
- log
-<form action="../controllers/db_insert.php" method="post">
-    <label for="user_name">Username:</label>
-    <input type="text" name="user_name" id="user_name" required>
-
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" required>
-
-    <button type="submit">Register</button>
-</form>
-
+</html>
 
 <?php $content = ob_get_clean(); // Store buffered content into $content ?>
-<?php $title = 'Home'; // Set the page title ?>
+<?php $title = 'devpage'; // Set the page title ?>
 <?php include 'layout.php'; // Include the layout ?>

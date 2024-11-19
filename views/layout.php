@@ -109,3 +109,6 @@ if (!empty($messages)) {
 
 </body>
 </html>
+<?php
+// Ensure that create_table_form.php is not included here
+?>

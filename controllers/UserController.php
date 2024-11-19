@@ -44,69 +44,40 @@ class UserController {
         return null;
     }
 
-    /**
-     * Updates user information.
-     *
-     * @param int $userId
-     * @param array $data
-     * @return bool
-     */
     public function updateUser($userId, $data) {
         return $this->userService->updateUser($userId, $data);
     }
 
-    /**
-     * Deletes a user.
-     *
-     * @param int $userId
-     * @return bool
-     */
     public function deleteUser($userId) {
         return $this->userService->deleteUser($userId);
     }
 
-    /**
-     * Changes the role of a user.
-     *
-     * @param int $userId
-     * @param string $newRole
-     * @return bool
-     */
     public function changeUserRole($userId, $newRole) {
         return $this->userService->changeUserRole($userId, $newRole);
     }
 
-    /**
-     * Retrieves instances assigned to a user.
-     *
-     * @param int $userId
-     * @return array
-     */
     public function getUserInstances($userId) {
         return $this->userService->getUserInstances($userId);
     }
 
-    
-    public function getUserByUsername($username) {
-
-        // Implement the logic to get user by username
-
-        // For example, you can query the database to get the user details
-
-        // Return the user details as an associative array or false if not found
-
-        $user = [
-
-            'username' => $username,
-
-            'email' => 'user@example.com',
-
-            'name' => 'John Doe'
-
-        ];
-
-        return $user;
-
+    public function getUserDetails($userId) {
+        return $this->userService->getUserDetails($userId);
     }
-    
+
+    public function createTable($table_name, $columns) {
+        return $this->userService->createTable($table_name, $columns);
+    }
+
+    public function getUserByUsername($username) {
+        // Implement the logic to get user by username
+        // For example, you can query the database to get the user details
+        // Return the user details as an associative array or false if not found
+        $user = [
+            'username' => $username,
+            'email' => 'user@example.com',
+            'name' => 'John Doe'
+        ];
+        return $user;
+    }
 }
+?>

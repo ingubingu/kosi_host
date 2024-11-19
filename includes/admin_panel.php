@@ -15,10 +15,6 @@ if (isset($_POST['searchQuery'])) {
             echo '<div class="user-container" data-username="' . htmlspecialchars($user) . '">
                     <div class="user-controls">
                         <span>' . htmlspecialchars($user) . '</span>
-                        <button class="button" id="addinstance">add instance</button>
-                        <button class="button">remove instance</button>
-                        <button class="button">delete user</button>
-                        <button class="button">edit user</button>
                     </div>
                 </div>';
         }
@@ -39,10 +35,6 @@ $users = $AU->getAllUsers();
         <div class="user-container" data-username="<?php echo htmlspecialchars($user); ?>">
             <div class="user-controls">
                 <span><?php echo ' username: ' . htmlspecialchars($user) . ', id: '. htmlspecialchars($AU->getId($user)); ?></span>
-                <button id="addInstanceButton" class="button">add instance</button>
-                <button class="button">remove instance</button>
-                <button class="button">delete user</button>
-                <button class="button">edit user</button>
             </div>
         </div>
     <?php endforeach; ?>

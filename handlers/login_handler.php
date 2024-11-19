@@ -11,24 +11,20 @@ Session::start();
 $user_name = $_POST['user_name'] ?? '';
 $password  = $_POST['password'] ?? '';
 
-// Removed CSRF token validation
-
 // Authenticate user
 $userController = new UserController();
 $user = $userController->login($user_name, $password);
 
+header('Content-Type: application/json');
+
 if ($user) {
     // Successful login
     $response = [
-        
         'success' => true,
         'message' => 'Login successful.'
-
     ];
-    //add successful login message
+    // Add successful login message
     Message::addMessage('You have been successfully logged in.', 'success');
-
-
 } else {
     // Login failed
     $response = [
