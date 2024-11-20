@@ -29,12 +29,12 @@ $users = $AU->getAllUsers();
 
 <h1>New ADMIN PANEL</h1>
 <input type="text" id="searchInput" class="search-bar" placeholder="Search for users...">
-<div id="userList">
+<div id="userList" class = "userList">
     <?php foreach ($users as $user) : ?>
         <?php $age = $AU->displayAccountAge($user); ?>
         <div class="user-container" data-username="<?php echo htmlspecialchars($user); ?>">
             <div class="user-controls">
-                <span><?php echo ' username: ' . htmlspecialchars($user) . ', id: '. htmlspecialchars($AU->getId($user)); ?></span>
+                <span><?php echo  htmlspecialchars($user) ?></span>
             </div>
         </div>
     <?php endforeach; ?>

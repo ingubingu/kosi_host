@@ -42,4 +42,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+
+    // Event Delegation for Clicks on .user-container Elements
+    adminPanel?.addEventListener('click', function (event) {
+        const container = event.target.closest('.user-container');
+        if (container && adminPanel.contains(container)) {
+            // Add click animation class
+            container.classList.add('click-animation');
+
+            // Remove the animation class after it completes
+            container.addEventListener('animationend', function handleAnimationEnd() {
+                container.classList.remove('click-animation');
+                container.removeEventListener('animationend', handleAnimationEnd);
+            });
+
+            // Create ripple effect
+            const ripple = document.createElement('span');
+            const diameter = Math.max(container.clientWidth, container.clientHeight);
+            const radius = diameter / 2;
+
+            ripple.style.width = ripple.style.height = `${diameter}px`;
+            ripple.style.left = `${event.clientX - container.getBoundingClientRect().left - radius}px`;
+            ripple.style.top = `${event.clientY - container.getBoundingClientRect().top - radius}px`;
+            ripple.classList.add('ripple');
+
+            container.appendChild(ripple);
+
+            ripple.addEventListener('animationend', () => {
+                ripple.remove();
+            });
+
+        }
+    });
+    // Initial call to add event listeners
+    addEventListeners();
 });

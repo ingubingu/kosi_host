@@ -32,8 +32,18 @@ ob_start();
 
 <?php if ($userData['role'] === 'admin'): ?>
     <button id="adminToggleButton">Admin Panel</button>
-    <div id="adminPanel" style="display: none;"></div>
 <?php endif; ?>
+    <div class = "panelcontainer">
+    <div id="adminPanel" style="display: none;" class = "adminPanel"></div>
+    
+<div class = "userdetails">
+    <h2>Account Details</h2>
+    <p>Username: <?php echo $userName; ?></p>
+    <p>Role: <?php echo $userData['role']; ?></p>
+</div>
+</div>
+
+
 
 <script src="../includes/admin_panel.js"></script>
 <?php
