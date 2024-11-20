@@ -27,7 +27,7 @@ $users = $AU->getAllUsers();
 
 ?>
 
-<h1>New ADMIN PANEL</h1>
+<h1>USER SEARCH</h1>
 <input type="text" id="searchInput" class="search-bar" placeholder="Search for users...">
 <div id="userList" class = "userList">
     <?php foreach ($users as $user) : ?>
